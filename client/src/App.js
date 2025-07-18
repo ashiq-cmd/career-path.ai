@@ -8,7 +8,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
- const res = await axios.post("https://career-path-backend-1.onrender.com/generate-career-path", {
+ const res = await axios.post("http://localhost:5000/generate-career-path", {
   interests: input,
 });
           // <-- key must match backend
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="p-8">
-      <h1 className="text-4xl font-bold mb-6">AI Career Guidance Platform</h1>
+      <h1 className="text-4xl font-bold mb-6">Welcome To CarrerPath.AI</h1>
 
       <form onSubmit={handleSubmit}>
         <label className="block text-xl mb-2">Enter Your Interests</label>
